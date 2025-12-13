@@ -1,5 +1,5 @@
 # first-repo
 learning the tools
 
-# github-actions
+ github-actions
 
