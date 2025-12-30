@@ -1,8 +1,14 @@
-  name: Greetings
+name : learning github-actions
 
-
+on: [push,pull_request,issues,release]
 
 jobs:
-  greeting:
-    runs-on: ubuntu-latest
-  
+   checking:
+        runs-on: ubuntu-latest
+        steps:
+            - name: package update 
+              run: sudo apt update -y 
+            - name: installation of wget    
+              run: sudo apt install wget -y 
+            - name: print the msg
+              run: echo "learning github-actions"
