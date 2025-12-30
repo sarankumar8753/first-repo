@@ -1,5 +1,5 @@
 name:  Learning GHA Concepts
-on: [push]
+on: [push,pull_request,issues,]
 jobs:
     practice:
         runs-on: macos-latest
@@ -11,10 +11,17 @@ jobs:
 
     duplicate:
         needs: practice
-        runs-on: macos-latest
+        runs-on: ubuntu-latest
         steps:
             - name: homebrew package update
               run: brew update 
             - name: tree installation
               run: brew install tree 
-              
+     applicant:
+        needs: practice
+        runs-on: windows-latest
+        steps:
+            - name: windows i dont know
+              run: echo "windows"
+            - name: windows i don't know
+              run: echo "windows"         
