@@ -2,19 +2,19 @@ name:  Learning GHA Concepts
 on: [push]
 jobs:
     practice:
-        runs-on: amazon-linux
+        runs-on: macos-latest
         steps:
-            - name: yum package update
-              run: yum update -y
+            - name: homebrew package update
+              run: brew update -y
             - name: git installation
-              run: yum install git -y
+              run: brew install git -y
 
     duplicate:
         needs: practice
-        runs-on: amazon-linux
+        runs-on: macos-latest
         steps:
-            - name: yum package update
-              run: yum update -y
-            - name: git installation
-              run: yum install tree -y
+            - name: homebrew package update
+              run: brew update -y
+            - name: tree installation
+              run: brew install tree -y
               
