@@ -5,16 +5,16 @@ jobs:
         runs-on: macos-latest
         steps:
             - name: homebrew package update
-              run: brew update -y
+              run: brew update 
             - name: git installation
-              run: brew install git -y
+              run: brew install git 
 
     duplicate:
         needs: practice
         runs-on: macos-latest
         steps:
             - name: homebrew package update
-              run: brew update -y
+              run: brew update 
             - name: tree installation
-              run: brew install tree -y
+              run: brew install tree 
               
