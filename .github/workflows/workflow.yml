@@ -1,0 +1,20 @@
+name:  Learning GHA Concepts
+on: [push]
+jobs:
+    practice:
+        runs-on: amazon-linux
+        steps:
+            - name: yum package update
+              run: yum update -y
+            - name: git installation
+              run: yum install git -y
+
+    duplicate:
+        needs: practice
+        runs-on: amazon-linux
+        steps:
+            - name: yum package update
+              run: yum update -y
+            - name: git installation
+              run: yum install tree -y
+              
